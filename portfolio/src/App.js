@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import NaviBar from './components/navibar/NaviBar';
+import Footer from './components/footer/Footer';
+import Home from './pages/home/Home';
+import AboutMe from './pages/aboutMe/AboutMe';
+import Projects from './pages/projects/Projects';
+import ContactMe from './pages/contactMe/ContactMe';
 import './App.css';
+
+// const colors = {'Emerald': '86CB92', 'Mint': '71B48D', 'YlnMn Blue': '404E7C', 'Space Cadet': '251F47', 'Dark Purple': '260F26'}
 
 function App() {
     return (
-        <div className="App">
+        <BrowserRouter>
             <NaviBar />
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-            
-                <h4>hi</h4>
-                
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-
-                <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer" >
-                    Learn React
-                </a>
-            </header>
-        </div>
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/AboutMe' element={<AboutMe />} />
+                <Route path='/Projects' element={<Projects />} />
+                <Route path='/ContactMe' element={<ContactMe />} />
+            </Routes>
+            <Footer />
+        </BrowserRouter>
     );
 }
 
