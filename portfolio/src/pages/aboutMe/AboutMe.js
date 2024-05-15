@@ -5,7 +5,7 @@ function AboutMe() {
     return (
         <>
             <Container maxWidth = "lg">
-                <Grid container spacing={2}>
+                <Grid container spacing={4}>
                     <Grid item xs={8}>
                         <img src={require("../../assets/ProfessionalPhoto.jpg")} alt="Headshot of Darren J. Cruz" width="500" heigh="500"/>
                     </Grid>
