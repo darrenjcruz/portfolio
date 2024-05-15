@@ -7,6 +7,7 @@ function Python() {
     const [slideIndex1, setSlideIndex1] = useState(0);
     const [slideIndex2, setSlideIndex2] = useState(0);
     const [slideIndex3, setSlideIndex3] = useState(0);
+    const [slideIndex4, setSlideIndex4] = useState(0);
     
     const cmdConnectFourImages = [
         require('../../assets/projects/cmdConnectFour/cmdConnectFour1.png'),
@@ -27,6 +28,15 @@ function Python() {
         require('../../assets/projects/cmdBlackjack/cmdBlackjack1.png'),
         require('../../assets/projects/cmdBlackjack/cmdBlackjack2.png'),
         require('../../assets/projects/cmdBlackjack/cmdBlackjack3.png'),
+    ]
+
+    const spaceInvadersImages = [
+        require('../../assets/projects/spaceInvaders/spaceInvaders1.png'),
+        require('../../assets/projects/spaceInvaders/spaceInvaders2.png'),
+        require('../../assets/projects/spaceInvaders/spaceInvaders3.png'),
+        require('../../assets/projects/spaceInvaders/spaceInvaders4.png'),
+        require('../../assets/projects/spaceInvaders/spaceInvaders5.png'),
+        require('../../assets/projects/spaceInvaders/spaceInvaders6.png'),
     ]
 
     const nextSlide = (length, setSlideIndex) => {
@@ -107,6 +117,33 @@ function Python() {
                             CMD Blackjack
                         </Typography>
                     </Card>
+                </Grid>
+
+                <Grid item xs={4}>
+                    <Card>
+                        <CardMedia
+                            component="img"
+                            image={spaceInvadersImages[slideIndex4]}
+                            alt={`Slide ${slideIndex4 + 1}`}
+                        />
+
+                        <Container className="card">
+                            <IconButton onClick={() => prevSlide(spaceInvadersImages.length, setSlideIndex4)}>
+                                <ArrowBack />
+                            </IconButton>
+                            <IconButton onClick={() => nextSlide(spaceInvadersImages.length, setSlideIndex4)}>
+                                <ArrowForward />
+                            </IconButton>
+                        </Container>
+
+                        <Typography gutterBottom variant="h6" component="div">
+                            Space Invaders
+                        </Typography>
+                    </Card>
+                </Grid>
+
+                <Grid item xs={12}>
+                    <Typography variant="h6" component="div">Check back in the future, more projects will be added as they are completed!</Typography>
                 </Grid>
             </Grid>
         </Container>
