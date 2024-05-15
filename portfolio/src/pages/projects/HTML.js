@@ -3,15 +3,17 @@ import { Container, Grid, Card, CardMedia, Typography, IconButton } from '@mui/m
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import './Projects.css';
 
-function Python() {
+function HTML() {
     const [slideIndex1, setSlideIndex1] = useState(0);
     const [slideIndex2, setSlideIndex2] = useState(0);
-    const [slideIndex3, setSlideIndex3] = useState(0);
     
-    const cmdConnectFourImages = [
-        require('../../assets/projects/cmdConnectFour/cmdConnectFour1.png'),
-        require('../../assets/projects/cmdConnectFour/cmdConnectFour2.png'),
-        require('../../assets/projects/cmdConnectFour/cmdConnectFour3.png')
+    const titanRadioMearchStoreImages = [
+        require('../../assets/projects/titanRadioMerchStore/titanRadioMerchStore1.png'),
+        require('../../assets/projects/titanRadioMerchStore/titanRadioMerchStore2.png'),
+        require('../../assets/projects/titanRadioMerchStore/titanRadioMerchStore3.png'),
+        require('../../assets/projects/titanRadioMerchStore/titanRadioMerchStore4.png'),
+        require('../../assets/projects/titanRadioMerchStore/titanRadioMerchStore5.png'),
+        require('../../assets/projects/titanRadioMerchStore/titanRadioMerchStore6.png'),
     ];
 
     const guiConnectFourImages = [
@@ -21,12 +23,6 @@ function Python() {
         require('../../assets/projects/guiConnectFour/guiConnectFour4.png'),
         require('../../assets/projects/guiConnectFour/guiConnectFour5.png'),
         require('../../assets/projects/guiConnectFour/guiConnectFour6.png'),
-    ]
-
-    const cmdBlackjackImages = [
-        require('../../assets/projects/cmdBlackjack/cmdBlackjack1.png'),
-        require('../../assets/projects/cmdBlackjack/cmdBlackjack2.png'),
-        require('../../assets/projects/cmdBlackjack/cmdBlackjack3.png'),
     ]
 
     const nextSlide = (length, setSlideIndex) => {
@@ -44,21 +40,21 @@ function Python() {
                     <Card>
                         <CardMedia
                             component="img"
-                            image={cmdConnectFourImages[slideIndex1]}
+                            image={titanRadioMearchStoreImages[slideIndex1]}
                             alt={`Slide ${slideIndex1 + 1}`}
                         />
 
                         <Container className="card">
-                            <IconButton onClick={() => prevSlide(cmdConnectFourImages.length, setSlideIndex1)}>
+                            <IconButton onClick={() => prevSlide(titanRadioMearchStoreImages.length, setSlideIndex1)}>
                                 <ArrowBack />
                             </IconButton>
-                            <IconButton onClick={() => nextSlide(cmdConnectFourImages.length, setSlideIndex1)}>
+                            <IconButton onClick={() => nextSlide(titanRadioMearchStoreImages.length, setSlideIndex1)}>
                                 <ArrowForward />
                             </IconButton>
                         </Container>
 
                         <Typography gutterBottom variant="h6" component="div">
-                            CMD Connect Four
+                            Titan Radio Merch Store
                         </Typography>
                     </Card>
                 </Grid>
@@ -85,32 +81,9 @@ function Python() {
                         </Typography>
                     </Card>
                 </Grid>
-
-                <Grid item xs={4}>
-                    <Card>
-                        <CardMedia
-                            component="img"
-                            image={cmdBlackjackImages[slideIndex3]}
-                            alt={`Slide ${slideIndex3 + 1}`}
-                        />
-
-                        <Container className="card">
-                            <IconButton onClick={() => prevSlide(cmdBlackjackImages.length, setSlideIndex3)}>
-                                <ArrowBack />
-                            </IconButton>
-                            <IconButton onClick={() => nextSlide(cmdBlackjackImages.length, setSlideIndex3)}>
-                                <ArrowForward />
-                            </IconButton>
-                        </Container>
-
-                        <Typography gutterBottom variant="h6" component="div">
-                            CMD Blackjack
-                        </Typography>
-                    </Card>
-                </Grid>
             </Grid>
         </Container>
     );
 }
 
-export default Python;
+export default HTML;

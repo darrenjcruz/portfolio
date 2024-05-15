@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Tab, Typography } from '@mui/material';
 import { TabContext, TabList, TabPanel } from '@mui/lab';
 import Python from './Python';
+import HTML from './HTML';
 
 function Projects() {
     const [value, setValue] = React.useState('1');
@@ -34,7 +35,7 @@ function Projects() {
                     </TabPanel>
 
                     <TabPanel value="3">
-                        HTML/JavaScript/React
+                        <HTML />
                     </TabPanel>
                 </TabContext>
             </Box>
