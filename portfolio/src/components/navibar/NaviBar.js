@@ -19,7 +19,7 @@ function NaviBar() {
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <Avatar alt="Darren Cruz" src={require("../../assets/AnimePhoto.jpg")} sx={{display: {xs: 'none', md: 'flex'}}} />
+                    <Avatar alt="Darren Cruz" src={require("../../assets/logo512.png")} sx={{display: {xs: 'none', md: 'flex'}}} variant='rounded' />
                     
                     <Typography className="Title" variant="h6" noWrap component={Link} to="/" sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, fontFamily: 'monospace', fontWeight: 700, letterSpacing: '.3rem', color: 'inherit', textDecoration: 'none', }}>
                         Darren Cruz's Portfolio
