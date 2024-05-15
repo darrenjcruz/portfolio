@@ -17,11 +17,11 @@ function NaviBar() {
 
     return (
         <AppBar position="static">
-            <Container maxWidth="xl">
+            <Container className="Header" maxWidth="xl">
                 <Toolbar disableGutters>
-                    <Avatar alt="Darren Cruz" src={require("../../assets/logo512.png")} sx={{display: {xs: 'none', md: 'flex'}}} variant='rounded' />
+                    <Avatar alt="Darren Cruz" src={require("../../assets/logo512.png")} component={Link} to="/" sx={{display: {xs: 'none', md: 'flex'}}} variant='rounded' />
                     
-                    <Typography className="Title" variant="h6" noWrap component={Link} to="/" sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, fontFamily: 'monospace', fontWeight: 700, letterSpacing: '.3rem', color: 'inherit', textDecoration: 'none', }}>
+                    <Typography className="Title" variant="h5" noWrap component={Link} to="/" sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, fontFamily: 'monospace', fontWeight: 700, letterSpacing: '.3rem', color: 'inherit', textDecoration: 'none', }}>
                         Darren Cruz's Portfolio
                     </Typography>
 
@@ -32,7 +32,7 @@ function NaviBar() {
                 
                         <Menu id="menu-appbar" anchorEl={anchorElNav} anchorOrigin={{ vertical: 'bottom', horizontal: 'left', }} keepMounted transformOrigin={{ vertical: 'top', horizontal: 'left', }} open={Boolean(anchorElNav)} onClose={handleCloseNavMenu} sx={{ display: { xs: 'block', md: 'none' }, }} >
                             <MenuItem onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center" component={Link} to="/AboutMe">About Me</Typography>
+                                <Typography cltextAlign="center" component={Link} to="/AboutMe">About Me</Typography>
                             </MenuItem>
 
                             <MenuItem onClick={handleCloseNavMenu}>
@@ -45,22 +45,22 @@ function NaviBar() {
                         </Menu>
                     </Box>
 
-                    <Avatar alt="Darren Cruz" src={require("../../assets/AnimePhoto.jpg")} sx={{display: {xs: 'flex', md: 'none'}}}/>
+                    <Avatar alt="Darren Cruz" src={require("../../assets/AnimePhoto.jpg")} component={Link} to="/" sx={{display: {xs: 'flex', md: 'none'}}}/>
 
                     <Typography className="Title" variant="h5" noWrap component={Link} to="/" href="#app-bar-with-responsive-menu" sx={{ mr: 2, display: { xs: 'flex', md: 'none' }, flexGrow: 1, fontFamily: 'monospace', fontWeight: 700, letterSpacing: '.3rem', color: 'inherit', textDecoration: 'none', }} >
                         Darren Cruz's Portfolio
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }} component={Link} to="/AboutMe">
+                        <Button className="LinkButton" onClick={handleCloseNavMenu} sx={{ my: 2, mx: 1, color: 'white', display: 'block' }} component={Link} to="/AboutMe">
                             About Me
                         </Button>
 
-                        <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }} component={Link} to="/Projects">
+                        <Button className="LinkButton" onClick={handleCloseNavMenu} sx={{ my: 2, mx: 1, color: 'white', display: 'block' }} component={Link} to="/Projects">
                             Projects
                         </Button>
 
-                        <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }} component={Link} to="/ContactMe">
+                        <Button className="LinkButton" onClick={handleCloseNavMenu} sx={{ my: 2, mx: 1, color: 'white', display: 'block' }} component={Link} to="/ContactMe">
                             Contact Me
                         </Button>
                     </Box>

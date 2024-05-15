@@ -14,12 +14,16 @@ function App() {
     return (
         <BrowserRouter>
             <NaviBar />
-            <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/AboutMe' element={<AboutMe />} />
-                <Route path='/Projects' element={<Projects />} />
-                <Route path='/ContactMe' element={<ContactMe />} />
-            </Routes>
+            
+            <div className='body'>
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/AboutMe' element={<AboutMe />} />
+                    <Route path='/Projects' element={<Projects />} />
+                    <Route path='/ContactMe' element={<ContactMe />} />
+                </Routes>
+            </div>
+            
             <Footer />
         </BrowserRouter>
     );

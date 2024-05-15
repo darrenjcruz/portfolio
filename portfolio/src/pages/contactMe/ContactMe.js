@@ -1,8 +1,12 @@
-import React, { useRef } from "react";
-import { Box, Button, Container, Grid, Stack, TextField, Typography } from "@mui/material";
+import React, { useState, useRef } from 'react';
+import { Box, Container, Grid, Stack, TextField, Typography, Button } from '@mui/material';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 import emailjs from '@emailjs/browser';
 
 function ContactMe() {
+    const [openSuccessSnackbar, setOpenSuccessSnackbar] = useState(false);
+    const [openErrorSnackbar, setOpenErrorSnackbar] = useState(false);
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -13,12 +17,32 @@ function ContactMe() {
         })
         .then(
             () => {
+                setOpenSuccessSnackbar(true);
+                setOpenErrorSnackbar(false);
                 console.log('success!');
             },
             (error) => {
+                setOpenErrorSnackbar(true);
+                setOpenSuccessSnackbar(false);
                 console.log('FAILED...', error.text);
             },
         );
+    };
+
+    const handleCloseSuccessSnackbar = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+        setOpenSuccessSnackbar(false);
+    };
+
+    const handleCloseErrorSnackbar = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+        setOpenErrorSnackbar(false);
     };
 
     return (
@@ -41,6 +65,16 @@ function ContactMe() {
                     </Box>
                 </Grid>
             </Grid>
+            <Snackbar open={openSuccessSnackbar} autoHideDuration={6000} onClose={handleCloseSuccessSnackbar}>
+                <Alert onClose={handleCloseSuccessSnackbar} severity="success">
+                    Email sent successfully!
+                </Alert>
+            </Snackbar>
+            <Snackbar open={openErrorSnackbar} autoHideDuration={6000} onClose={handleCloseErrorSnackbar}>
+                <Alert onClose={handleCloseErrorSnackbar} severity="error">
+                    Failed to send email. Please try again later.
+                </Alert>
+            </Snackbar>
         </Container>
     );
 }

@@ -1,4 +1,12 @@
+/* Footer.css */
+.FooterWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 .Footer {
-    Background: #260F26;
-    color: white;
+    background-color: #251F47;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto; /* Pushes the footer to the bottom */
 }
