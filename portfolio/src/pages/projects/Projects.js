@@ -15,13 +15,13 @@ function Projects() {
 
     return (
         <>
-            <Typography className="Title" variant="h6" noWrap sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, fontFamily: 'monospace', fontWeight: 700, letterSpacing: '.3rem', color: 'inherit', textDecoration: 'none', }}>
+            <Typography variant="h1" align="center" gutterBottom>
                 Projects
             </Typography>
             <Box sx={{ width: '100%', typography: 'body1' }}>
                 <TabContext value={value}>
-                    <Box sx={{ width: '100%', bgcolor: 'background.paper', borderBottom: 1, borderColor: 'divider' }}>
-                        <TabList onChange={handleChange} aria-label="lab API tabs example" centered >
+                    <Box sx={{display: 'flex', justifyContent: 'center' }} >
+                        <TabList onChange={handleChange} aria-label="lab API tabs example" variant="scrollable" scrollButtons="auto" centered sx={{ width: '75%', bgcolor: '#353535', borderRadius:'8px'}}>
                             <Tab label="Python" value="1" />
                             <Tab label="C++" value="2" />
                             <Tab label="HTML/JavaScript/React" value="3" />

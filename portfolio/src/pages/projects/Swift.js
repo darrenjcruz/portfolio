@@ -71,7 +71,7 @@ function Swift() {
         <Container maxWidth="lg">
             <Grid container spacing={4}>
                 <Grid item xs={4}>
-                    <Card>
+                    <Card sx={{ backgroundColor: '#353535' }}>
                         <CardMedia
                             component="img"
                             image={weSplitImages[slideIndex1]}
@@ -87,14 +87,14 @@ function Swift() {
                             </IconButton>
                         </Container>
 
-                        <Typography gutterBottom variant="h6" component="div">
-                            HackingWithSwift - WeSplit iOs App
+                        <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
+                            WeSplit iOs App
                         </Typography>
                     </Card>
                 </Grid>
 
                 <Grid item xs={4}>
-                    <Card>
+                    <Card sx={{ backgroundColor: '#353535' }}>
                         <CardMedia
                             component="img"
                             image={guessTheFlagImages[slideIndex2]}
@@ -110,14 +110,14 @@ function Swift() {
                             </IconButton>
                         </Container>
 
-                        <Typography gutterBottom variant="h6" component="div">
-                            HackingWithSwift - Guess The Flag iOs App
+                        <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
+                            Guess The Flag iOs App
                         </Typography>
                     </Card>
                 </Grid>
 
                 <Grid item xs={4}>
-                    <Card>
+                    <Card sx={{ backgroundColor: '#353535' }}>
                         <CardMedia
                             component="img"
                             image={wordScrambleImages[slideIndex3]}
@@ -133,14 +133,14 @@ function Swift() {
                             </IconButton>
                         </Container>
 
-                        <Typography gutterBottom variant="h6" component="div">
-                            HackingWithSwift - Word Scramble iOs App
+                        <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
+                            Word Scramble iOs App
                         </Typography>
                     </Card>
                 </Grid>
 
                 <Grid item xs={4}>
-                    <Card>
+                    <Card sx={{ backgroundColor: '#353535' }}>
                         <CardMedia
                             component="img"
                             image={iExpenseImages[slideIndex4]}
@@ -156,14 +156,14 @@ function Swift() {
                             </IconButton>
                         </Container>
 
-                        <Typography gutterBottom variant="h6" component="div">
-                            HackingWithSwift - iExpense iOs App
+                        <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
+                            iExpense iOs App
                         </Typography>
                     </Card>
                 </Grid>
 
                 <Grid item xs={4}>
-                    <Card>
+                    <Card sx={{ backgroundColor: '#353535' }}>
                         <CardMedia
                             component="img"
                             image={moonshotImages[slideIndex5]}
@@ -179,14 +179,14 @@ function Swift() {
                             </IconButton>
                         </Container>
 
-                        <Typography gutterBottom variant="h6" component="div">
-                            HackingWithSwift - Moonshot iOs App
+                        <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
+                            Moonshot iOs App
                         </Typography>
                     </Card>
                 </Grid>
 
                 <Grid item xs={4}>
-                    <Card>
+                    <Card sx={{ backgroundColor: '#353535' }}>
                         <CardMedia
                             component="img"
                             image={othelloImages[slideIndex6]}
@@ -202,14 +202,14 @@ function Swift() {
                             </IconButton>
                         </Container>
 
-                        <Typography gutterBottom variant="h6" component="div">
+                        <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
                             Othello iOs App
                         </Typography>
                     </Card>
                 </Grid>
 
                 <Grid item xs={12}>
-                    <Typography variant="h6" component="div">Check back in the future, more projects will be added as they are completed!</Typography>
+                    <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>Check back in the future, more projects will be added as they are completed!</Typography>
                 </Grid>
             </Grid>
         </Container>

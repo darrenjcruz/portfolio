@@ -51,7 +51,7 @@ function Python() {
         <Container maxWidth="lg">
             <Grid container spacing={4}>
                 <Grid item xs={4}>
-                    <Card>
+                    <Card sx={{ backgroundColor: '#353535' }}>
                         <CardMedia
                             component="img"
                             image={cmdConnectFourImages[slideIndex1]}
@@ -67,14 +67,14 @@ function Python() {
                             </IconButton>
                         </Container>
 
-                        <Typography gutterBottom variant="h6" component="div">
+                        <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
                             CMD Connect Four
                         </Typography>
                     </Card>
                 </Grid>
 
                 <Grid item xs={4}>
-                    <Card>
+                    <Card sx={{ backgroundColor: '#353535' }}>
                         <CardMedia
                             component="img"
                             image={guiConnectFourImages[slideIndex2]}
@@ -90,14 +90,14 @@ function Python() {
                             </IconButton>
                         </Container>
 
-                        <Typography gutterBottom variant="h6" component="div">
+                        <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
                             GUI Connect Four
                         </Typography>
                     </Card>
                 </Grid>
 
                 <Grid item xs={4}>
-                    <Card>
+                    <Card sx={{ backgroundColor: '#353535' }}>
                         <CardMedia
                             component="img"
                             image={cmdBlackjackImages[slideIndex3]}
@@ -113,14 +113,14 @@ function Python() {
                             </IconButton>
                         </Container>
 
-                        <Typography gutterBottom variant="h6" component="div">
+                        <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
                             CMD Blackjack
                         </Typography>
                     </Card>
                 </Grid>
 
                 <Grid item xs={4}>
-                    <Card>
+                    <Card sx={{ backgroundColor: '#353535' }}>
                         <CardMedia
                             component="img"
                             image={spaceInvadersImages[slideIndex4]}
@@ -136,14 +136,14 @@ function Python() {
                             </IconButton>
                         </Container>
 
-                        <Typography gutterBottom variant="h6" component="div">
+                        <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
                             Space Invaders
                         </Typography>
                     </Card>
                 </Grid>
 
                 <Grid item xs={12}>
-                    <Typography variant="h6" component="div">Check back in the future, more projects will be added as they are completed!</Typography>
+                <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>Check back in the future, more projects will be added as they are completed!</Typography>
                 </Grid>
             </Grid>
         </Container>

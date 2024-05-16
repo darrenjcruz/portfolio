@@ -45,7 +45,7 @@ function HTML() {
         <Container maxWidth="lg">
             <Grid container spacing={4}>
                 <Grid item xs={4}>
-                    <Card>
+                    <Card sx={{ backgroundColor: '#353535' }}> 
                         <CardMedia
                             component="img"
                             image={titanRadioMearchStoreImages[slideIndex1]}
@@ -61,14 +61,14 @@ function HTML() {
                             </IconButton>
                         </Container>
 
-                        <Typography gutterBottom variant="h6" component="div">
+                        <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
                             Titan Radio Merch Store
                         </Typography>
                     </Card>
                 </Grid>
 
                 <Grid item xs={4}>
-                    <Card>
+                    <Card sx={{ backgroundColor: '#353535' }}>
                         <CardMedia
                             component="img"
                             image={quizzicalImages[slideIndex2]}
@@ -84,14 +84,14 @@ function HTML() {
                             </IconButton>
                         </Container>
 
-                        <Typography gutterBottom variant="h6" component="div">
+                        <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
                             Quizzical Website
                         </Typography>
                     </Card>
                 </Grid>
 
                 <Grid item xs={4}>
-                    <Card>
+                    <Card sx={{ backgroundColor: '#353535' }}>
                         <CardMedia
                             component="img"
                             image={recipeFindersImages[slideIndex3]}
@@ -107,14 +107,14 @@ function HTML() {
                             </IconButton>
                         </Container>
 
-                        <Typography gutterBottom variant="h6" component="div">
+                        <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
                             Recipe Finders Web Application
                         </Typography>
                     </Card>
                 </Grid>
 
                 <Grid item xs={12}>
-                    <Typography variant="h6" component="div">Check back in the future, more projects will be added as they are completed!</Typography>
+                    <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>Check back in the future, more projects will be added as they are completed!</Typography>
                 </Grid>
             </Grid>
         </Container>
