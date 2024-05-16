@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Container, Typography, Button, Grid, Card, CardContent, CardMedia, CardActions, Stack } from '@mui/material';
 import './Home.css';
 
@@ -79,13 +80,13 @@ function Home() {
                 {/* Buttons for viewing all projects and contacting */}
                 <Grid container spacing={2} justifyContent="center" style={{ marginTop: '16px' }}>
                     <Grid item xs={12} sm={6}>
-                        <Button variant="contained" fullWidth style={{ backgroundColor: '#251F47', color: '#fff' }} href="/Projects">
+                        <Button variant="contained" fullWidth style={{ backgroundColor: '#251F47', color: '#fff' }} component={Link} to="/Projects">
                             View All Projects
                         </Button>
                     </Grid>
                     
                     <Grid item xs={12} sm={6}>
-                        <Button variant="contained" fullWidth style={{ backgroundColor: '#251F47', color: '#fff' }} href="/ContactMe">
+                        <Button variant="contained" fullWidth style={{ backgroundColor: '#251F47', color: '#fff' }} component={Link} to="/ContactMe">
                             Contact Me
                         </Button>
                     </Grid>

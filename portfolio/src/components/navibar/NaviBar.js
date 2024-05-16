@@ -23,7 +23,7 @@ function NaviBar() {
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     {/* Logo */}
-                    <Avatar alt="Darren Cruz" src={require("../../assets/logo512.png")} component={Link} to="/" sx={{ display: { xs: 'none', md: 'flex' } }} variant='rounded' />
+                    <Avatar alt="DJC" src={require("../../assets/logo512.png")} component={Link} to="/" sx={{ display: { xs: 'none', md: 'flex' } }} variant='rounded' />
                     
                     {/* Title */}
                     <Typography className="Title" variant="h5" noWrap component={Link} to="/" sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, fontFamily: 'monospace', fontWeight: 700, letterSpacing: '.3rem', color: 'inherit', textDecoration: 'none', }}>
@@ -53,7 +53,7 @@ function NaviBar() {
                     </Box>
 
                     {/* Avatar for mobile */}
-                    <Avatar alt="Darren Cruz" src={require("../../assets/AnimePhoto.jpg")} component={Link} to="/" sx={{ display: { xs: 'flex', md: 'none' } }}/>
+                    <Avatar alt="DJC" src={require("../../assets/logo512.png")} component={Link} to="/" sx={{ display: { xs: 'flex', md: 'none' } }} variant='rounded'/>
 
                     {/* Title for mobile */}
                     <Typography className="Title" variant="h5" noWrap component={Link} to="/" href="#app-bar-with-responsive-menu" sx={{ mr: 2, display: { xs: 'flex', md: 'none' }, flexGrow: 1, fontFamily: 'monospace', fontWeight: 700, letterSpacing: '.3rem', color: 'inherit', textDecoration: 'none', }} >
