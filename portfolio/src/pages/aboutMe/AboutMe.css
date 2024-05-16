@@ -1,0 +1,16 @@
+.Image {
+    display: flex;
+    justify-content: center;
+}
+
+.Description {
+    display: flex;
+    justify-content: center;
+    color: #260F26;
+    align-items: center;
+    text-align: center;
+}
+
+.Title .ItemName {
+    text-align: center;
+}

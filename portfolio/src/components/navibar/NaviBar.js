@@ -16,8 +16,8 @@ function NaviBar() {
     };
 
     return (
-        <AppBar position="static">
-            <Container className="Header" maxWidth="xl">
+        <AppBar position="static"  sx={{ backgroundColor: '#251F47' }}>
+            <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Avatar alt="Darren Cruz" src={require("../../assets/logo512.png")} component={Link} to="/" sx={{display: {xs: 'none', md: 'flex'}}} variant='rounded' />
                     
