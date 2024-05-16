@@ -38,6 +38,7 @@ function AboutMe() {
                                     <CardActionArea>
                                         {/* Skill image */}
                                         <CardMedia component="img" image={require(`../../assets/${skill.toLowerCase()}.png`)} alt={skill} />
+                                        
                                         {/* Skill name */}
                                         <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px' }}>
                                             {skill}

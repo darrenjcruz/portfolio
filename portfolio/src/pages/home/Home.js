@@ -28,45 +28,54 @@ function Home() {
                     <Grid item xs={12} sm={6} md={4}>
                         <Card sx={{ backgroundColor: '#353535' }}>
                             <CardMedia component="img" image={project1Image} alt="Project 1" />
+
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
                                     GUI Connect Four
                                 </Typography>
                             </CardContent>
+                            
                             <CardActions>
                                 {/* Button for viewing project */}
                             </CardActions>
                         </Card>
                     </Grid>
+
                     {/* Project 2 excerpt */}
                     <Grid item xs={12} sm={6} md={4}>
                         <Card sx={{ backgroundColor: '#353535' }}>
                             <CardMedia component="img" image={project2Image} alt="Project 2" />
+
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
                                     Recipe Finders Web App
                                 </Typography>
                             </CardContent>
+
                             <CardActions>
                                 {/* Button for viewing project */}
                             </CardActions>
                         </Card>
                     </Grid>
+
                     {/* Project 3 excerpt */}
                     <Grid item xs={12} sm={6} md={4}>
                         <Card sx={{ backgroundColor: '#353535' }}>
                             <CardMedia component="img" image={project3Image} alt="Project 3" />
+
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
                                     Othello iOs App
                                 </Typography>
                             </CardContent>
+
                             <CardActions>
                                 {/* Button for viewing project */}
                             </CardActions>
                         </Card>
                     </Grid>
                 </Grid>
+
                 {/* Buttons for viewing all projects and contacting */}
                 <Grid container spacing={2} justifyContent="center" style={{ marginTop: '16px' }}>
                     <Grid item xs={12} sm={6}>
@@ -74,6 +83,7 @@ function Home() {
                             View All Projects
                         </Button>
                     </Grid>
+                    
                     <Grid item xs={12} sm={6}>
                         <Button variant="contained" fullWidth style={{ backgroundColor: '#251F47', color: '#fff' }} href="/ContactMe">
                             Contact Me

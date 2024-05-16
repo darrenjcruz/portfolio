@@ -43,8 +43,10 @@ function Footer() {
                                         <Stack>
                                             {/* Title for social media links */}
                                             <Typography variant="h6">Connect with me</Typography>
+
                                             {/* Divider for visual separation */}
                                             <Divider />
+                                            
                                             {/* Stack for arranging social media icons */}
                                             <Stack direction="row" spacing={2} alignItems="center">
                                                 {/* LinkedIn icon */}

@@ -7,19 +7,24 @@ import HTML from './HTML';
 import Swift from './Swift';
 
 function Projects() {
+    // State for managing the selected tab
     const [value, setValue] = React.useState('1');
 
+    // Function to handle tab change
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
 
     return (
         <>
+            {/* Projects title */}
             <Typography variant="h1" align="center" gutterBottom>
                 Projects
             </Typography>
+            {/* Tab container */}
             <Box sx={{ width: '100%', typography: 'body1' }}>
                 <TabContext value={value}>
+                    {/* Tab list */}
                     <Box sx={{display: 'flex', justifyContent: 'center' }} >
                         <TabList onChange={handleChange} aria-label="lab API tabs example" variant="scrollable" scrollButtons="auto" centered sx={{ width: '75%', bgcolor: '#353535', borderRadius:'8px'}}>
                             <Tab label="Python" value="1" />
@@ -29,6 +34,7 @@ function Projects() {
                         </TabList>
                     </Box>
 
+                    {/* Tab panels */}
                     <TabPanel value="1">
                         <Python />
                     </TabPanel>
@@ -40,7 +46,7 @@ function Projects() {
                     <TabPanel value="3">
                         <HTML />
                     </TabPanel>
-
+                    
                     <TabPanel value="4">
                         <Swift />
                     </TabPanel>

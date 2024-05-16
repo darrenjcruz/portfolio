@@ -4,11 +4,13 @@ import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import './Projects.css';
 
 function Python() {
+    // State variables for managing slide indexes
     const [slideIndex1, setSlideIndex1] = useState(0);
     const [slideIndex2, setSlideIndex2] = useState(0);
     const [slideIndex3, setSlideIndex3] = useState(0);
     const [slideIndex4, setSlideIndex4] = useState(0);
     
+    // Arrays holding images for each project
     const cmdConnectFourImages = [
         require('../../assets/projects/cmdConnectFour/cmdConnectFour1.png'),
         require('../../assets/projects/cmdConnectFour/cmdConnectFour2.png'),
@@ -22,13 +24,13 @@ function Python() {
         require('../../assets/projects/guiConnectFour/guiConnectFour4.png'),
         require('../../assets/projects/guiConnectFour/guiConnectFour5.png'),
         require('../../assets/projects/guiConnectFour/guiConnectFour6.png'),
-    ]
+    ];
 
     const cmdBlackjackImages = [
         require('../../assets/projects/cmdBlackjack/cmdBlackjack1.png'),
         require('../../assets/projects/cmdBlackjack/cmdBlackjack2.png'),
         require('../../assets/projects/cmdBlackjack/cmdBlackjack3.png'),
-    ]
+    ];
 
     const spaceInvadersImages = [
         require('../../assets/projects/spaceInvaders/spaceInvaders1.png'),
@@ -37,12 +39,14 @@ function Python() {
         require('../../assets/projects/spaceInvaders/spaceInvaders4.png'),
         require('../../assets/projects/spaceInvaders/spaceInvaders5.png'),
         require('../../assets/projects/spaceInvaders/spaceInvaders6.png'),
-    ]
+    ];
 
+    // Function to move to the next slide
     const nextSlide = (length, setSlideIndex) => {
         setSlideIndex((prevIndex) => (prevIndex + 1) % length);
     };
 
+    // Function to move to the previous slide
     const prevSlide = (length, setSlideIndex) => {
         setSlideIndex((prevIndex) => (prevIndex - 1 + length) % length);
     };
@@ -50,6 +54,7 @@ function Python() {
     return (
         <Container maxWidth="lg">
             <Grid container spacing={4}>
+                {/* CMD Connect Four project */}
                 <Grid item xs={4}>
                     <Card sx={{ backgroundColor: '#353535' }}>
                         <CardMedia
@@ -58,21 +63,25 @@ function Python() {
                             alt={`Slide ${slideIndex1 + 1}`}
                         />
 
+                        {/* Navigation buttons */}
                         <Container className="card">
                             <IconButton onClick={() => prevSlide(cmdConnectFourImages.length, setSlideIndex1)}>
                                 <ArrowBack />
                             </IconButton>
+
                             <IconButton onClick={() => nextSlide(cmdConnectFourImages.length, setSlideIndex1)}>
                                 <ArrowForward />
                             </IconButton>
                         </Container>
 
+                        {/* Project title */}
                         <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
                             CMD Connect Four
                         </Typography>
                     </Card>
                 </Grid>
 
+                {/* GUI Connect Four project */}
                 <Grid item xs={4}>
                     <Card sx={{ backgroundColor: '#353535' }}>
                         <CardMedia
@@ -81,21 +90,25 @@ function Python() {
                             alt={`Slide ${slideIndex2 + 1}`}
                         />
 
+                        {/* Navigation buttons */}
                         <Container className="card">
                             <IconButton onClick={() => prevSlide(guiConnectFourImages.length, setSlideIndex2)}>
                                 <ArrowBack />
                             </IconButton>
+
                             <IconButton onClick={() => nextSlide(guiConnectFourImages.length, setSlideIndex2)}>
                                 <ArrowForward />
                             </IconButton>
                         </Container>
 
+                        {/* Project title */}
                         <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
                             GUI Connect Four
                         </Typography>
                     </Card>
                 </Grid>
 
+                {/* CMD Blackjack project */}
                 <Grid item xs={4}>
                     <Card sx={{ backgroundColor: '#353535' }}>
                         <CardMedia
@@ -104,21 +117,25 @@ function Python() {
                             alt={`Slide ${slideIndex3 + 1}`}
                         />
 
+                        {/* Navigation buttons */}
                         <Container className="card">
                             <IconButton onClick={() => prevSlide(cmdBlackjackImages.length, setSlideIndex3)}>
                                 <ArrowBack />
                             </IconButton>
+
                             <IconButton onClick={() => nextSlide(cmdBlackjackImages.length, setSlideIndex3)}>
                                 <ArrowForward />
                             </IconButton>
                         </Container>
 
+                        {/* Project title */}
                         <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
                             CMD Blackjack
                         </Typography>
                     </Card>
                 </Grid>
 
+                {/* Space Invaders project */}
                 <Grid item xs={4}>
                     <Card sx={{ backgroundColor: '#353535' }}>
                         <CardMedia
@@ -127,23 +144,29 @@ function Python() {
                             alt={`Slide ${slideIndex4 + 1}`}
                         />
 
+                        {/* Navigation buttons */}
                         <Container className="card">
                             <IconButton onClick={() => prevSlide(spaceInvadersImages.length, setSlideIndex4)}>
                                 <ArrowBack />
                             </IconButton>
+                            
                             <IconButton onClick={() => nextSlide(spaceInvadersImages.length, setSlideIndex4)}>
                                 <ArrowForward />
                             </IconButton>
                         </Container>
 
+                        {/* Project title */}
                         <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
                             Space Invaders
                         </Typography>
                     </Card>
                 </Grid>
 
+                {/* Message for future projects */}
                 <Grid item xs={12}>
-                <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>Check back in the future, more projects will be added as they are completed!</Typography>
+                    <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
+                        Check back in the future, more projects will be added as they are completed!
+                    </Typography>
                 </Grid>
             </Grid>
         </Container>

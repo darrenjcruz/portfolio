@@ -5,10 +5,13 @@ import Alert from '@mui/material/Alert';
 import emailjs from '@emailjs/browser';
 
 function ContactMe() {
+    // State variables for controlling success and error snackbars
     const [openSuccessSnackbar, setOpenSuccessSnackbar] = useState(false);
     const [openErrorSnackbar, setOpenErrorSnackbar] = useState(false);
+    // Ref for accessing the form element
     const formRef = useRef();
 
+    // Function to send email
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -29,6 +32,7 @@ function ContactMe() {
         );
     };
 
+    // Function to close success snackbar
     const handleCloseSuccessSnackbar = (event, reason) => {
         if (reason === 'clickaway') {
             return;
@@ -37,6 +41,7 @@ function ContactMe() {
         setOpenSuccessSnackbar(false);
     };
 
+    // Function to close error snackbar
     const handleCloseErrorSnackbar = (event, reason) => {
         if (reason === 'clickaway') {
             return;
@@ -49,12 +54,14 @@ function ContactMe() {
         <Container maxWidth="md">
             <Grid container spacing={3}>
                 <Grid item xs={12}>
+                    {/* Header */}
                     <Typography variant="h6" component='p'>Inquiries</Typography>
                     <Typography>Please fill out the form on the right or email me directly at darrenjcruz@gmail.com</Typography>
                     <Typography>(Please check Spam folders for my response.)</Typography>
                 </Grid>
 
                 <Grid item xs={12}>
+                    {/* Form */}
                     <form ref={formRef} onSubmit={sendEmail}>
                         <Stack spacing={2}>
                             <TextField label="Name" variant="outlined" fullWidth name='user_name' required />
@@ -67,12 +74,14 @@ function ContactMe() {
                 </Grid>
             </Grid>
 
+            {/* Success Snackbar */}
             <Snackbar open={openSuccessSnackbar} autoHideDuration={6000} onClose={handleCloseSuccessSnackbar}>
                 <Alert onClose={handleCloseSuccessSnackbar} severity="success">
                     Email sent successfully!
                 </Alert>
             </Snackbar>
             
+            {/* Error Snackbar */}
             <Snackbar open={openErrorSnackbar} autoHideDuration={6000} onClose={handleCloseErrorSnackbar}>
                 <Alert onClose={handleCloseErrorSnackbar} severity="error">
                     Failed to send email. Please try again later.
