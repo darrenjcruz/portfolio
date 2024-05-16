@@ -31,14 +31,13 @@ function AboutMe() {
                     </Grid>
 
                     {/* Skills cards */}
-                    {["Python", "C++", "CSS", "HTML", "JavaScript", "React", "Swift/SwiftUI"].map((skill, index) => (
+                    {["Python", "C++", "CSS", "HTML", "JavaScript", "React", "SwiftUI"].map((skill, index) => (
                         <Grid key={index} item xs={6} sm={4} md={3}>
                             <Paper sx={{ backgroundColor: '#353535' }} elevation={3}>
                                 <Card sx={{ bgcolor: '#353535' }}>
                                     <CardActionArea>
                                         {/* Skill image */}
                                         <CardMedia component="img" image={require(`../../assets/${skill.toLowerCase()}.png`)} alt={skill} />
-                                        
                                         {/* Skill name */}
                                         <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px' }}>
                                             {skill}
