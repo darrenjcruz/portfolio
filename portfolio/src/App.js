@@ -8,15 +8,16 @@ import Projects from './pages/projects/Projects';
 import ContactMe from './pages/contactMe/ContactMe';
 import './App.css';
 
-// const colors = {'Emerald': '86CB92', 'Mint': '71B48D', 'YlnMn Blue': '404E7C', 'Space Cadet': '251F47', 'Dark Purple': '260F26'}
-
 function App() {
     return (
         <BrowserRouter>
+            {/* Navigation Bar */}
             <NaviBar />
             
+            {/* Main Content */}
             <div className='body'>
                 <Routes>
+                    {/* Routes */}
                     <Route path='/' element={<Home />} />
                     <Route path='/AboutMe' element={<AboutMe />} />
                     <Route path='/Projects' element={<Projects />} />
@@ -24,6 +25,7 @@ function App() {
                 </Routes>
             </div>
             
+            {/* Footer */}
             <Footer />
         </BrowserRouter>
     );

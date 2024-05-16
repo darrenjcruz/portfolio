@@ -10,17 +10,21 @@ import project3Image from '../../assets/projects/othello/othello4.png';
 function Home() {
     return (
         <Container className="body" maxWidth="lg">
+            {/* Stack for organizing content */}
             <Stack>
+                {/* Title */}
                 <Typography className="title" variant="h2" gutterBottom>
                     Welcome to My Portfolio!
                 </Typography>
 
+                {/* Introduction */}
                 <Typography variant="body1" paragraph>
                     This is the homepage of my portfolio website. Here, you can find information about me, my projects, and how to contact me.
                 </Typography>
             
+                {/* Grid for project excerpts */}
                 <Grid container spacing={3} justifyContent="center">
-                    {/* Project excerpts */}
+                    {/* Project 1 excerpt */}
                     <Grid item xs={12} sm={6} md={4}>
                         <Card sx={{ backgroundColor: '#353535' }}>
                             <CardMedia component="img" image={project1Image} alt="Project 1" />
@@ -28,17 +32,13 @@ function Home() {
                                 <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
                                     GUI Connect Four
                                 </Typography>
-                                {/* <Typography variant="body2" color="textSecondary">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique massa quis nunc molestie, sit amet volutpat dolor tristique.
-                                </Typography> */}
                             </CardContent>
                             <CardActions>
-                                {/* <Button size="small" color="primary" href="/project1">
-                                    View Project
-                                </Button> */}
+                                {/* Button for viewing project */}
                             </CardActions>
                         </Card>
                     </Grid>
+                    {/* Project 2 excerpt */}
                     <Grid item xs={12} sm={6} md={4}>
                         <Card sx={{ backgroundColor: '#353535' }}>
                             <CardMedia component="img" image={project2Image} alt="Project 2" />
@@ -46,17 +46,13 @@ function Home() {
                                 <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
                                     Recipe Finders Web App
                                 </Typography>
-                                {/* <Typography variant="body2" color="textSecondary">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique massa quis nunc molestie, sit amet volutpat dolor tristique.
-                                </Typography> */}
                             </CardContent>
                             <CardActions>
-                                {/* <Button size="small" color="primary" href="/project2">
-                                    View Project
-                                </Button> */}
+                                {/* Button for viewing project */}
                             </CardActions>
                         </Card>
                     </Grid>
+                    {/* Project 3 excerpt */}
                     <Grid item xs={12} sm={6} md={4}>
                         <Card sx={{ backgroundColor: '#353535' }}>
                             <CardMedia component="img" image={project3Image} alt="Project 3" />
@@ -64,27 +60,22 @@ function Home() {
                                 <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
                                     Othello iOs App
                                 </Typography>
-                                {/* <Typography variant="body2" color="textSecondary">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tristique massa quis nunc molestie, sit amet volutpat dolor tristique.
-                                </Typography> */}
                             </CardContent>
                             <CardActions>
-                                {/* <Button size="small" color="primary" href="/project3">
-                                    View Project
-                                </Button> */}
+                                {/* Button for viewing project */}
                             </CardActions>
                         </Card>
                     </Grid>
                 </Grid>
-                {/* Buttons */}
+                {/* Buttons for viewing all projects and contacting */}
                 <Grid container spacing={2} justifyContent="center" style={{ marginTop: '16px' }}>
                     <Grid item xs={12} sm={6}>
-                        <Button variant="contained" fullWidth style={{ backgroundColor: '#251F47', color: '#fff' }} href="/projects">
+                        <Button variant="contained" fullWidth style={{ backgroundColor: '#251F47', color: '#fff' }} href="/Projects">
                             View All Projects
                         </Button>
                     </Grid>
                     <Grid item xs={12} sm={6}>
-                        <Button variant="contained" fullWidth style={{ backgroundColor: '#251F47', color: '#fff' }} href="/contact">
+                        <Button variant="contained" fullWidth style={{ backgroundColor: '#251F47', color: '#fff' }} href="/ContactMe">
                             Contact Me
                         </Button>
                     </Grid>
