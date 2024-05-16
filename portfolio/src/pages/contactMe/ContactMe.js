@@ -61,7 +61,7 @@ function ContactMe() {
                             <TextField label="Email Address" variant="outlined" fullWidth name='user_email' type='email' required />
                             <TextField label="Subject" variant="outlined" fullWidth name='subject' />
                             <TextField label="Your Message" multiline minRows={4} variant="outlined" fullWidth name='message' required />
-                            <Button variant="contained" type="submit" fullWidth>Send</Button>
+                            <Button variant="contained" type="submit" fullWidth style={{ backgroundColor: '#251F47', color: '#fff' }}>Send</Button>
                         </Stack>
                     </form>
                 </Grid>
