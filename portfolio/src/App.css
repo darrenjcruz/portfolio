@@ -1,3 +1,5 @@
+/* App.css */
+
 .body {
     min-height: calc(100vh - 64px); /* Adjust the height to ensure it spans the entire viewport */
     padding: 20px; /* Optional: Add padding for spacing */

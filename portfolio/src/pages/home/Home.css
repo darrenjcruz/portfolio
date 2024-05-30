@@ -1,7 +1,14 @@
+/* Home.css */
+
 .body {
     background-color: #404E7C;
 }
 
 .title {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.paragraph {
     text-align: center;
 }

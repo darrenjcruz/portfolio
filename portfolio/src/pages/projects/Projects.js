@@ -1,4 +1,6 @@
-import React from 'react';
+// Projects.js
+
+import React, { useEffect } from 'react';
 import { Box, Tab, Typography } from '@mui/material';
 import { TabContext, TabList, TabPanel } from '@mui/lab';
 import Python from './Python';
@@ -7,6 +9,10 @@ import HTML from './HTML';
 import Swift from './Swift';
 
 function Projects() {
+    useEffect(() => {
+        document.title = "Darren Cruz's Projects"
+    })
+
     // State for managing the selected tab
     const [value, setValue] = React.useState('1');
 

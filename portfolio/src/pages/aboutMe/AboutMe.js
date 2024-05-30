@@ -1,8 +1,14 @@
-import React from 'react';
+// AboutMe.js
+
+import React, { useEffect } from 'react';
 import { Container, Grid, Stack, Card, CardMedia, CardActionArea, Typography, Avatar, Paper } from '@mui/material';
 import './AboutMe.css';
 
 function AboutMe() {
+    useEffect(() => {
+        document.title = "About Darren Cruz"
+    })
+
     return (
         <>
             {/* Main container */}

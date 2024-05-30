@@ -1,4 +1,6 @@
-import React, { useState, useRef } from 'react';
+// ContactMe.js
+
+import React, { useState, useRef, useEffect } from 'react';
 import { Container, Grid, Stack, TextField, Typography, Button } from '@mui/material';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
@@ -10,6 +12,10 @@ function ContactMe() {
     const [openErrorSnackbar, setOpenErrorSnackbar] = useState(false);
     // Ref for accessing the form element
     const formRef = useRef();
+
+    useEffect(() => {
+        document.title = "Contact Darren Cruz"
+    })
 
     // Function to send email
     const sendEmail = (e) => {

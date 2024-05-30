@@ -1,14 +1,39 @@
-import React from 'react';
+// Home.js
+
+import React, { useEffect, useState } from 'react';
+import { Container, Typography, Grid, Stack, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { Container, Typography, Button, Grid, Card, CardContent, CardMedia, CardActions, Stack } from '@mui/material';
+import ProjectCard from '../projects/ProjectCard';
+import { AllProjects } from '../projects/ProjectData';
 import './Home.css';
 
-// Import images for project excerpts
-import project1Image from '../../assets/projects/guiConnectFour/guiConnectFour3.png';
-import project2Image from '../../assets/projects/recipeFinders/recipeFinders3.png';
-import project3Image from '../../assets/projects/othello/othello4.png';
-
 function Home() {
+    const [featuredProjects, setfeaturedProjects] = useState([]);
+    const [favoriteProjects, setFavoriteProjects] = useState([]);
+    const excludedProjects = [
+        // Project titles of projects that will be excluded from the random selection.
+        'Space Invaders',
+        'Recipe Finders Web Application',
+        'Othello',
+    ];
+
+    useEffect(() => {
+        document.title = "Darren Cruz's Portfolio"
+
+        // Function to select random projects
+        const selectfeaturedProjects = () => {
+            const availableProjects = AllProjects.filter(project => !excludedProjects.includes(project.title));
+            const shuffledProjects = availableProjects.sort(() => 0.5 - Math.random());
+            const selectedProjects = shuffledProjects.slice(0, 3);
+            setfeaturedProjects(selectedProjects);
+        }
+
+        const favoriteProject1 = AllProjects.filter(project => excludedProjects.includes(project.title));
+        setFavoriteProjects(favoriteProject1);
+
+        selectfeaturedProjects();
+    }, []);
+
     return (
         <Container className="body" maxWidth="lg">
             {/* Stack for organizing content */}
@@ -19,62 +44,34 @@ function Home() {
                 </Typography>
 
                 {/* Introduction */}
-                <Typography variant="body1" paragraph>
+                <Typography className="paragraph" variant="body1" paragraph>
                     This is the homepage of my portfolio website. Here, you can find information about me, my projects, and how to contact me.
                 </Typography>
-            
-                {/* Grid for project excerpts */}
+
+                {/* Favorite Projects */}
+                <Typography className="title" variant="h4" gutterBottom>
+                    Favorite Projects
+                </Typography>
+
                 <Grid container spacing={3} justifyContent="center">
-                    {/* Project 1 excerpt */}
-                    <Grid item xs={12} sm={6} md={4}>
-                        <Card sx={{ backgroundColor: '#353535' }}>
-                            <CardMedia component="img" image={project1Image} alt="Project 1" />
+                    {favoriteProjects.map((project, index) => (
+                        <Grid item xs={12} sm={6} md={4} key={index}>
+                            <ProjectCard project={project} />
+                        </Grid>
+                    ))}
+                </Grid>
 
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
-                                    GUI Connect Four
-                                </Typography>
-                            </CardContent>
-                            
-                            <CardActions>
-                                {/* Button for viewing project */}
-                            </CardActions>
-                        </Card>
-                    </Grid>
+                {/* Featured Projects */}
+                <Typography className="title" variant="h4" gutterBottom>
+                    Featured Projects
+                </Typography>
 
-                    {/* Project 2 excerpt */}
-                    <Grid item xs={12} sm={6} md={4}>
-                        <Card sx={{ backgroundColor: '#353535' }}>
-                            <CardMedia component="img" image={project2Image} alt="Project 2" />
-
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
-                                    Recipe Finders Web App
-                                </Typography>
-                            </CardContent>
-
-                            <CardActions>
-                                {/* Button for viewing project */}
-                            </CardActions>
-                        </Card>
-                    </Grid>
-
-                    {/* Project 3 excerpt */}
-                    <Grid item xs={12} sm={6} md={4}>
-                        <Card sx={{ backgroundColor: '#353535' }}>
-                            <CardMedia component="img" image={project3Image} alt="Project 3" />
-
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
-                                    Othello iOs App
-                                </Typography>
-                            </CardContent>
-
-                            <CardActions>
-                                {/* Button for viewing project */}
-                            </CardActions>
-                        </Card>
-                    </Grid>
+                <Grid container spacing={3} justifyContent="center">
+                    {featuredProjects.map((project, index) => (
+                        <Grid item xs={12} sm={6} md={4} key={index}>
+                            <ProjectCard project={project} />
+                        </Grid>
+                    ))}
                 </Grid>
 
                 {/* Buttons for viewing all projects and contacting */}

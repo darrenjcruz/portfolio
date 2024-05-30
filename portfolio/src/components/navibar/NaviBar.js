@@ -1,3 +1,5 @@
+// NaviBar.js
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Avatar, Button, MenuItem } from '@mui/material';

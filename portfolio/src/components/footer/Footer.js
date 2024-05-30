@@ -1,3 +1,5 @@
+// Footer.js
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { Avatar, Container, Divider, Grid, IconButton, Stack, Typography } from "@mui/material";

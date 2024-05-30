@@ -1,8 +1,14 @@
-import React from 'react';
+// C++.js
+
+import React, { useEffect } from 'react';
 import { Container, Grid, Typography } from '@mui/material';
 import './Projects.css';
 
 function CPlusPlus() {
+    useEffect(() => {
+        document.title = "Darren Cruz's Projects: C++"
+    })
+
     return (
         // Container for the entire component
         <Container maxWidth="lg">
