@@ -1,7 +1,7 @@
 // ProjectCard.js
 
 import React, { useState } from 'react';
-import { Card, CardMedia, IconButton, Box, Typography } from '@mui/material';
+import { Card, CardMedia, IconButton, Box, Typography, CardActions, Button } from '@mui/material';
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 
 function ProjectCard({ project }) {
@@ -40,6 +40,31 @@ function ProjectCard({ project }) {
             <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px' }}>
                 {project.title}
             </Typography>
+
+            <CardActions>
+                {project.gitHubLink && !project.deployedLink && (
+                    <Button fullWidth variant="contained" color="primary" href={project.gitHubLink}>
+                        GitHub
+                    </Button>
+                )}
+
+                {!project.gitHubLink && project.deployedLink && (
+                    <Button fullWidth variant="contained" color="primary" href={project.deployedLink}>
+                        Deployed
+                    </Button>
+                )}
+
+                {project.gitHubLink && project.deployedLink && (
+                    <React.Fragment>
+                        <Button fullWidth variant="contained" color="primary" href={project.deployedLink}>
+                            Deployed
+                        </Button>
+                        <Button fullWidth variant="contained" color="primary" href={project.gitHubLink}>
+                            GitHub
+                        </Button>
+                    </React.Fragment>
+                )}
+            </CardActions>
         </Card>
     );
 }

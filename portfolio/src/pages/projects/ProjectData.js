@@ -21,7 +21,7 @@ const PythonProject2 = {
         require('../../assets/projects/guiConnectFour/guiConnectFour5.png'),
         require('../../assets/projects/guiConnectFour/guiConnectFour6.png'),
     ],
-    gitHubLink: '',
+    gitHubLink: 'https://github.com/darrenjcruz/CPSC-254-GUI-Connect-4',
     deployedLink: '',
 };
 
