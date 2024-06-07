@@ -7,7 +7,7 @@ const PythonProject1 = {
         require('../../assets/projects/cmdConnectFour/cmdConnectFour2.png'),
         require('../../assets/projects/cmdConnectFour/cmdConnectFour3.png'),
     ],
-    gitHubLink: '',
+    gitHubLink: 'https://github.com/darrenjcruz/CMD-Connect-4',
     deployedLink: '',
 };
 
