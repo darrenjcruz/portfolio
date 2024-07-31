@@ -32,7 +32,7 @@ const PythonProject3 = {
         require('../../assets/projects/cmdBlackjack/cmdBlackjack2.png'),
         require('../../assets/projects/cmdBlackjack/cmdBlackjack3.png'),
     ],
-    gitHubLink: '',
+    gitHubLink: 'https://github.com/darrenjcruz/CMD-Blackjack',
     deployedLink: '',
 };
 
