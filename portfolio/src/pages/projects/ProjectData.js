@@ -46,7 +46,7 @@ const PythonProject4 = {
         require('../../assets/projects/spaceInvaders/spaceInvaders5.png'),
         require('../../assets/projects/spaceInvaders/spaceInvaders6.png'),
     ],
-    gitHubLink: '',
+    gitHubLink: 'https://github.com/darrenjcruz/Space-Invaders',
     deployedLink: '',
 };
 
