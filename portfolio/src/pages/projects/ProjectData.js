@@ -75,7 +75,7 @@ const HTMLProject2 = {
         require('../../assets/projects/quizzical/quizzical2.png'),
         require('../../assets/projects/quizzical/quizzical3.png'),
     ],
-    gitHubLink: '',
+    gitHubLink: 'https://github.com/darrenjcruz/Quizzical-Website',
     deployedLink: '',
 };
 
