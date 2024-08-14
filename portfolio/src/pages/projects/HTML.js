@@ -12,7 +12,9 @@ function HTML() {
     })
 
     return (
+        // Container for the entire component
         <Container maxWidth="lg">
+            {/* Grid container with spacing */}
             <Grid container spacing={4}>
                 {/* Projects */}
                 {HTMLProjects.map((project, index) => (

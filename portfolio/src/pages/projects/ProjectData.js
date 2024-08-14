@@ -50,9 +50,15 @@ const PythonProject4 = {
     deployedLink: '',
 };
 
-/* const CPPProject1 = {
-
-} */
+const CPPProject1 = {
+    title: 'Compiler Parsing Table',
+    images: [
+        require('../../assets/projects/compilerParsingTable/compilerParsingTable1.png'),
+        require('../../assets/projects/compilerParsingTable/compilerParsingTable2.png'),
+    ],
+    gitHubLink: 'https://github.com/darrenjcruz/CPSC323_Project02',
+    deployedLink: '',
+};
 
 const HTMLProject1 = {
     title: 'Titan Radio Merch Store',
@@ -179,9 +185,9 @@ const PythonProjects = [
     PythonProject4,
 ];
 
-/* const CPPProjects = [
+const CPPProjects = [
     CPPProject1,
-]; */
+];
 
 const HTMLProjects = [
     HTMLProject1,
@@ -200,8 +206,9 @@ const SwiftProjects = [
 
 const AllProjects = [
     ...PythonProjects,
+    ...CPPProjects,
     ...HTMLProjects,
     ...SwiftProjects,
 ];
 
-export { AllProjects, PythonProjects, HTMLProjects, SwiftProjects };
+export { AllProjects, PythonProjects, CPPProjects, HTMLProjects, SwiftProjects };

@@ -2,6 +2,8 @@
 
 import React, { useEffect } from 'react';
 import { Container, Grid, Typography } from '@mui/material';
+import ProjectCard from './ProjectCard';
+import { CPPProjects } from './ProjectData';
 import './Projects.css';
 
 function CPlusPlus() {
@@ -14,7 +16,12 @@ function CPlusPlus() {
         <Container maxWidth="lg">
             {/* Grid container with spacing */}
             <Grid container spacing={4}>
-                {/* Grid item taking full width */}
+                {/* Projects */}
+                {CPPProjects.map((project, index) => (
+                    <Grid item xs={12} sm={6} md={4} key={index}>
+                        <ProjectCard project={project} />
+                    </Grid>
+                ))}
                 <Grid item xs={12}>
                     {/* Typography component for displaying a message */}
                     <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingTop: '10px'  }}>
