@@ -64,8 +64,8 @@ const HTMLProject1 = {
         require('../../assets/projects/titanRadioMerchStore/titanRadioMerchStore5.png'),
         require('../../assets/projects/titanRadioMerchStore/titanRadioMerchStore6.png'),
     ],
-    gitHubLink: '',
-    deployedLink: '',
+    gitHubLink: 'https://github.com/darrenjcruz/Titan-Radio-Merch-Website',
+    deployedLink: 'https://titan-radio-shop-apv6uakfxq-uc.a.run.app/',
 };
 
 const HTMLProject2 = {
