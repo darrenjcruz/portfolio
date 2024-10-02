@@ -77,13 +77,13 @@ function Home() {
                 {/* Buttons for viewing all projects and contacting */}
                 <Grid container spacing={2} justifyContent="center" style={{ marginTop: '16px' }}>
                     <Grid item xs={12} sm={6}>
-                        <Button variant="contained" fullWidth style={{ backgroundColor: '#251F47', color: '#fff' }} component={Link} to="/Projects">
+                        <Button variant="contained" fullWidth style={{ backgroundColor: '#251F47', color: '#fff' }} component={Link} to="/portfolio/Projects">
                             View All Projects
                         </Button>
                     </Grid>
                     
                     <Grid item xs={12} sm={6}>
-                        <Button variant="contained" fullWidth style={{ backgroundColor: '#251F47', color: '#fff' }} component={Link} to="/ContactMe">
+                        <Button variant="contained" fullWidth style={{ backgroundColor: '#251F47', color: '#fff' }} component={Link} to="/portfolio/ContactMe">
                             Contact Me
                         </Button>
                     </Grid>

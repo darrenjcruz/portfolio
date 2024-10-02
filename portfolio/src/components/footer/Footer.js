@@ -21,7 +21,7 @@ function Footer() {
                                     {/* Stack for vertically arranging content */}
                                     <Stack spacing={2}>
                                         {/* Link to contact page */}
-                                        <Link to='/ContactMe' className="FooterLink">
+                                        <Link to='/portfolio/ContactMe' className="FooterLink">
                                             <Typography variant="h6">Work with me</Typography>
                                         </Link>
 

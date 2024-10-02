@@ -20,10 +20,10 @@ function App() {
             <div className='body'>
                 <Routes>
                     {/* Routes */}
-                    <Route path='/' element={<Home />} />
-                    <Route path='/AboutMe' element={<AboutMe />} />
-                    <Route path='/Projects' element={<Projects />} />
-                    <Route path='/ContactMe' element={<ContactMe />} />
+                    <Route path='/portfolio/' element={<Home />} />
+                    <Route path='/portfolio/AboutMe' element={<AboutMe />} />
+                    <Route path='/portfolio/Projects' element={<Projects />} />
+                    <Route path='/portfolio/ContactMe' element={<ContactMe />} />
                 </Routes>
             </div>
             

@@ -25,10 +25,10 @@ function NaviBar() {
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     {/* Logo */}
-                    <Avatar alt="DJC" src={require("../../assets/logo512.png")} component={Link} to="/" sx={{ display: { xs: 'none', md: 'flex' } }} variant='rounded' />
+                    <Avatar alt="DJC" src={require("../../assets/logo512.png")} component={Link} to="/portfolio/" sx={{ display: { xs: 'none', md: 'flex' } }} variant='rounded' />
                     
                     {/* Title */}
-                    <Typography className="Title" variant="h5" noWrap component={Link} to="/" sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, fontFamily: 'monospace', fontWeight: 700, letterSpacing: '.3rem', color: 'inherit', textDecoration: 'none', }}>
+                    <Typography className="Title" variant="h5" noWrap component={Link} to="/portfolio/" sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, fontFamily: 'monospace', fontWeight: 700, letterSpacing: '.3rem', color: 'inherit', textDecoration: 'none', }}>
                         Darren Cruz's Portfolio
                     </Typography>
 
@@ -41,38 +41,38 @@ function NaviBar() {
                         {/* Navigation menu for mobile */}
                         <Menu id="menu-appbar" anchorEl={anchorElNav} anchorOrigin={{ vertical: 'bottom', horizontal: 'left', }} keepMounted transformOrigin={{ vertical: 'top', horizontal: 'left', }} open={Boolean(anchorElNav)} onClose={handleCloseNavMenu} sx={{ display: { xs: 'block', md: 'none' }, }} >
                             <MenuItem onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center" component={Link} to="/AboutMe">About Me</Typography>
+                                <Typography textAlign="center" component={Link} to="/portfolio/AboutMe">About Me</Typography>
                             </MenuItem>
 
                             <MenuItem onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center" component={Link} to="/Projects">Projects</Typography>
+                                <Typography textAlign="center" component={Link} to="/portfolio/Projects">Projects</Typography>
                             </MenuItem>
 
                             <MenuItem onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center" component={Link} to="/ContactMe">Contact Me</Typography>
+                                <Typography textAlign="center" component={Link} to="/portfolio/ContactMe">Contact Me</Typography>
                             </MenuItem>
                         </Menu>
                     </Box>
 
                     {/* Avatar for mobile */}
-                    <Avatar alt="DJC" src={require("../../assets/logo512.png")} component={Link} to="/" sx={{ display: { xs: 'flex', md: 'none' } }} variant='rounded'/>
+                    <Avatar alt="DJC" src={require("../../assets/logo512.png")} component={Link} to="/portfolio/" sx={{ display: { xs: 'flex', md: 'none' } }} variant='rounded'/>
 
                     {/* Title for mobile */}
-                    <Typography className="Title" variant="h5" noWrap component={Link} to="/" href="#app-bar-with-responsive-menu" sx={{ mr: 2, display: { xs: 'flex', md: 'none' }, flexGrow: 1, fontFamily: 'monospace', fontWeight: 700, letterSpacing: '.3rem', color: 'inherit', textDecoration: 'none', }} >
+                    <Typography className="Title" variant="h5" noWrap component={Link} to="/portfolio/" href="#app-bar-with-responsive-menu" sx={{ mr: 2, display: { xs: 'flex', md: 'none' }, flexGrow: 1, fontFamily: 'monospace', fontWeight: 700, letterSpacing: '.3rem', color: 'inherit', textDecoration: 'none', }} >
                         Darren Cruz's Portfolio
                     </Typography>
 
                     {/* Navigation links for desktop */}
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        <Button className="LinkButton" onClick={handleCloseNavMenu} sx={{ my: 2, mx: 1, color: 'white', display: 'block' }} component={Link} to="/AboutMe">
+                        <Button className="LinkButton" onClick={handleCloseNavMenu} sx={{ my: 2, mx: 1, color: 'white', display: 'block' }} component={Link} to="/portfolio/AboutMe">
                             About Me
                         </Button>
 
-                        <Button className="LinkButton" onClick={handleCloseNavMenu} sx={{ my: 2, mx: 1, color: 'white', display: 'block' }} component={Link} to="/Projects">
+                        <Button className="LinkButton" onClick={handleCloseNavMenu} sx={{ my: 2, mx: 1, color: 'white', display: 'block' }} component={Link} to="/portfolio/Projects">
                             Projects
                         </Button>
                         
-                        <Button className="LinkButton" onClick={handleCloseNavMenu} sx={{ my: 2, mx: 1, color: 'white', display: 'block' }} component={Link} to="/ContactMe">
+                        <Button className="LinkButton" onClick={handleCloseNavMenu} sx={{ my: 2, mx: 1, color: 'white', display: 'block' }} component={Link} to="/portfolio/ContactMe">
                             Contact Me
                         </Button>
                     </Box>
