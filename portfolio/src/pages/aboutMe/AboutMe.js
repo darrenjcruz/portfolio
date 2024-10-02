@@ -32,12 +32,12 @@ function AboutMe() {
                             </Typography>
                             <Grid container spacing={2}>
                                 <Grid item xs={6}>
-                                    <Button fullWidth variant='contained' color='primary' href='/files/DarrenCruz_Resume_Master.pdf' download startIcon={<DownloadIcon />}>
+                                    <Button fullWidth variant='contained' color='primary' href='https://raw.githubusercontent.com/darrenjcruz/portfolio/main/portfolio/public/files/DarrenCruz_Resume_Master.pdf' download startIcon={<DownloadIcon />}>
                                         Complete History
                                     </Button>
                                 </Grid>
                                 <Grid item xs={6}>
-                                    <Button fullWidth variant='contained' color='primary' href='/files/DarrenCruz_Resume_2024.pdf' download startIcon={<DownloadIcon />}>
+                                    <Button fullWidth variant='contained' color='primary' href='https://raw.githubusercontent.com/darrenjcruz/portfolio/main/portfolio/public/files/DarrenCruz_Resume_2024.pdf' download startIcon={<DownloadIcon />}>
                                         Resume
                                     </Button>
                                 </Grid>
